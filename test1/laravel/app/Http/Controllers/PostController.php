@@ -19,6 +19,7 @@ class PostController extends Controller
             'title' => $request->input('title'),
             'content' => $request->input('content'),
         ]);
+        $post->save();
 
         // 回傳新增成功訊息
         return response()->json(['message' => 'Post created successfully'], 201);
